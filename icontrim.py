@@ -28,9 +28,12 @@ def createpack():
     import json, time, random
     request_data = json.loads(json_data)
     identifier = ''.join([str(time.time()),'-',str(random.randint(0, 99999))])
+    
+    #make the tmp folder
     dir = os.path.join(os.curdir, TMP_FILE_DIR, identifier)
     if not os.path.exists(dir):
         os.makedirs(dir)
+
     identifier = create_subfont(identifier,request_data)
 
     response = app.make_response(''.join(['/api/downloadpack/',identifier]))
@@ -52,7 +55,8 @@ def create_subfont(identifier,req_chars):
     import fontforge
 
 	#font & family & file name
-    name = ''.join(['bootstrap_subfont',identifier])
+    #name = ''.join(['bootstrap_subfont',identifier])
+    name = 'fontawesome'
 
 	#set up the font
     f = fontforge.open('fonts/fontawesome-webfont.ttf')
@@ -61,26 +65,76 @@ def create_subfont(identifier,req_chars):
     f.fondname = name
     f.fullname = name
 
-	#set up the less file
+    #set up the less file
     less_data = open('font-awesome.less.template').read()
     less_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.less'])),'w')
     less_out_file.write(less_data)
 
+    #set up the ie compatibility less file
+    lessie7_data = open('font-awesome-ie7.less.template').read()
+    lessie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.less'])),'w')
+    lessie7_out_file.write(lessie7_data)
+
+    #set up the sass file
+    sass_data = open('font-awesome.sass.template').read()
+    sass_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.sass'])),'w')
+    sass_out_file.write(sass_data)
+
+    print(sass_out_file)
+
+    #set up the scss file
+    scss_data = open('font-awesome.scss.template').read()
+    scss_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.scss'])),'w')
+    scss_out_file.write(scss_data)    
+
+    #set up the css file
+    css_data = open('font-awesome.css.template').read()
+    css_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.css'])),'w')
+    css_out_file.write(css_data)
+
+    #set up the ie compatibility css file
+    cssie7_data = open('font-awesome-ie7.css.template').read()
+    cssie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.css'])),'w')
+    cssie7_out_file.write(cssie7_data)
+
+
 	# Select all the chars we want
     for character in req_chars:
+
         # write the char to the less file
         less_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.less'])),'a')
         less_out_file.write(''.join(['.icon-',str(character['name']),':before',"\t\t",'{ content: "\\f',str(character['uni']),'"; }',"\n"]))
+
+        # write the char to the ie7 compatibility less file
+        lessie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.less'])),'a')
+        lessie7_out_file.write(''.join(['.icon-',str(character['name']),"\t\t","{ .ie7icon('&#xf",str(character['uni']),";'); }","\n"]))
+
+        # write the char to the sass file
+        sass_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.sass'])),'a')
+        sass_out_file.write(''.join(['.icon-',str(character['name']),':before',"\n\t",'content: "\\f',str(character['uni']),'"',"\n\n"]))
+
+        # write the char to the scss file
+        scss_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.scss'])),'a')
+        scss_out_file.write(''.join(['.icon-',str(character['name']),':before',"\t\t",'{ content: "\\f',str(character['uni']),'"; }',"\n"]))
+
+        # write the char to the css file
+        css_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.css'])),'a')
+        css_out_file.write(''.join(['.icon-',str(character['name']),':before',"\t\t",'{ content: "\\f',str(character['uni']),'"; }',"\n"]))
+
+        # write the char to the ie7 compatibility css file
+        cssie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.css'])),'a')
+        cssie7_out_file.write(''.join(['.icon-',str(character['name'])," { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf",str(character['uni']),";&nbsp;'); }","\n"]))
+
         # select it in fontforge
         f.selection.select(("more","unicode",None),''.join(['uniF',str(character['uni'])]))
 
-	# Invert the selection
+    # Invert the selection
     f.selection.invert()
 
 	# Remove the selected objects
     f.cut()
 
-	#kick out an otf
+	#kick out the various font files
     filetypes = [	'ttf',
 					'eot',
 					'woff',
@@ -88,7 +142,26 @@ def create_subfont(identifier,req_chars):
 				]
 
     for filetype in filetypes:
-		f.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '.', filetype])))
+		f.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-webfont.', filetype])))
+
+    #Open and write one more empty space to each file so the last character line will actually get written
+    less_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.less'])),'a')
+    less_out_file.write(' ')
+
+    lessie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.less'])),'a')
+    lessie7_out_file.write(' ')
+
+    sass_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.sass'])),'a')
+    sass_out_file.write(' ')
+
+    scss_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.scss'])),'a')
+    scss_out_file.write(' ')
+
+    css_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.css'])),'a')
+    css_out_file.write(' ')
+
+    cssie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.css'])),'a')
+    cssie7_out_file.write(' ')
 
     import subprocess
     PIPE = subprocess.PIPE
