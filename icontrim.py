@@ -65,6 +65,11 @@ def create_subfont(identifier,req_chars):
     f.fondname = name
     f.fullname = name
 
+    #set up the html test file
+    html_data = open('test.html.template').read()
+    html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'),'w')
+    html_out_file.write(html_data)
+
     #set up the less file
     less_data = open('font-awesome.less.template').read()
     less_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.less'])),'w')
@@ -79,8 +84,6 @@ def create_subfont(identifier,req_chars):
     sass_data = open('font-awesome.sass.template').read()
     sass_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.sass'])),'w')
     sass_out_file.write(sass_data)
-
-    print(sass_out_file)
 
     #set up the scss file
     scss_data = open('font-awesome.scss.template').read()
@@ -100,6 +103,10 @@ def create_subfont(identifier,req_chars):
 
 	# Select all the chars we want
     for character in req_chars:
+
+        # write the char to the test html file
+        html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'),'a')
+        html_out_file.write(''.join(['<h1><i class="icon-',str(character['name']),'"></i> icon-',str(character['name']),'</h1>']))
 
         # write the char to the less file
         less_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.less'])),'a')
@@ -145,6 +152,9 @@ def create_subfont(identifier,req_chars):
 		f.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-webfont.', filetype])))
 
     #Open and write one more empty space to each file so the last character line will actually get written
+    html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'),'a')
+    html_out_file.write('</body></html>')
+
     less_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'.less'])),'a')
     less_out_file.write(' ')
 
