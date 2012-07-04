@@ -20,6 +20,14 @@ DOWNLOAD_DIR = 'download'
 # create our little application :)
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.debug = True
+
+if app.config['DEBUG']:
+    from werkzeug import SharedDataMiddleware
+    import os
+    app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
+      '/': os.path.join(os.path.dirname(__file__), 'static')
+    })
 
 @app.route('/api/createpack', methods=['POST'])
 def createpack():
