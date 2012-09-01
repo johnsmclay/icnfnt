@@ -29,6 +29,15 @@ if app.config['DEBUG']:
       '/': os.path.join(os.path.dirname(__file__), 'static')
     })
 
+#==============================================
+#
+#    CREATE NEW FONT PACK
+#
+#    Expects JSON Data in the POST
+#    e.g. [{"name":"align-left","uni":"036"}]
+#    
+#==============================================
+
 @app.route('/api/createpack', methods=['POST'])
 def createpack():
     json_data = request.form['json_data']
@@ -48,6 +57,12 @@ def createpack():
 
     return response
 
+#==============================================
+#
+#    DOWNLOAD THE TEMPORARY FONT PACKFILE
+#    
+#==============================================
+
 @app.route('/api/downloadpack/<identifier>')
 def downloadpack(identifier):
     zipfile = os.path.join(os.curdir, DOWNLOAD_DIR, ''.join([identifier,'.zip']) )
@@ -63,7 +78,6 @@ def create_subfont(identifier,req_chars):
     import fontforge
 
 	#font & family & file name
-    #name = ''.join(['bootstrap_subfont',identifier])
     name = 'fontawesome'
 
 	#set up the font
@@ -156,10 +170,13 @@ def create_subfont(identifier,req_chars):
 					'svg',
 				]
 
+    #actually generate the font files
     for filetype in filetypes:
 		f.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-webfont.', filetype])))
 
+    
     #Open and write one more empty space to each file so the last character line will actually get written
+
     html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'),'a')
     html_out_file.write('</body></html>')
 
@@ -181,13 +198,14 @@ def create_subfont(identifier,req_chars):
     cssie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name,'-ie7.css'])),'a')
     cssie7_out_file.write(' ')
 
+    #Create the zip file
     import subprocess
     PIPE = subprocess.PIPE
     zipfile = os.path.join(os.curdir, DOWNLOAD_DIR, ''.join([identifier,'.zip']))
     pd = subprocess.Popen(['/usr/bin/zip', '-r', '-j', zipfile, os.path.join(os.curdir, TMP_FILE_DIR, identifier)], stdout=PIPE, stderr=PIPE) 
     stdout, stderr = pd.communicate()
 
-    # delete the files created so they don't take up space
+    #Delete the files created so they don't take up space
     import shutil
     shutil.rmtree(os.path.join(os.curdir, TMP_FILE_DIR, identifier))
 
