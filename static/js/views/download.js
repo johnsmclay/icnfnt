@@ -26,7 +26,8 @@ define([
 
     // Send request to download font kit
     downloadKit: function(glyph) {
-      if (Glyphs.checkForSeleced()) {
+      if (Glyphs.checkForSelected()) {
+        _gaq.push(['_trackEvent', 'Download', 'Success']);
         $.ajax({
           url: "/api/createpack",
           type: 'POST',
@@ -38,6 +39,7 @@ define([
           window.location.href = url;
         });
       } else {
+        _gaq.push(['_trackEvent', 'Download', 'Rejected - No glyphs selected.']);
         alert("Please select at least one icon to download a kit.");
       }
     },

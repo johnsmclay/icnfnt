@@ -18,6 +18,15 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
     // Toggle the `selected` state of the glyph.
     toggle: function() {
+      
+      // Google Analytics Event Tracking
+      if (this.get("selected")) {
+        _gaq.push(['_trackEvent', 'Glyphs', this.get("name") + ' De-selected']);
+      } 
+      else if (!this.get("selected")) {
+        _gaq.push(['_trackEvent', 'Glyphs', this.get("name") + ' Selected selected']);
+      }
+
       this.save( { selected: !this.get("selected") } );
       return this.selected;
     },

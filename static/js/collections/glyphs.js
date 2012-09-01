@@ -52,7 +52,7 @@ define([
       var count = 0;
 
       this.each(function(glyph){
-        if (glyph.selected)
+        if (glyph.attributes.selected)
           count++;
       });
 

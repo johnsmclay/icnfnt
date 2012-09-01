@@ -49,11 +49,13 @@ define([
     selectAll: function(evt) {
       evt.preventDefault();
       Glyphs.selectAll();
+      _gaq.push(['_trackEvent', 'Glyphs', 'Select All']);
     },
 
     selectNone: function(evt) {
       evt.preventDefault();
       Glyphs.selectNone();
+      _gaq.push(['_trackEvent', 'Glyphs', 'Select None']);
     }
 
   });

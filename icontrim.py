@@ -31,7 +31,7 @@ if app.config['DEBUG']:
 
 #==============================================
 #
-#    CREATE NEW FONT PACK
+#    ROUTE: CREATE NEW FONT PACK
 #
 #    Expects JSON Data in the POST
 #    e.g. [{"name":"align-left","uni":"036"}]
@@ -41,7 +41,7 @@ if app.config['DEBUG']:
 @app.route('/api/createpack', methods=['POST'])
 def createpack():
     json_data = request.form['json_data']
-    #json_data = open('fontawesome.json').read()
+    
     import json, time, random
     request_data = json.loads(json_data)
     identifier = ''.join([str(time.time()),'-',str(random.randint(0, 99999))])
@@ -57,11 +57,11 @@ def createpack():
 
     return response
 
-#==============================================
+#===============================================
 #
-#    DOWNLOAD THE TEMPORARY FONT PACKFILE
+#    ROUTE: DOWNLOAD THE TEMPORARY FONT PACKFILE
 #    
-#==============================================
+#===============================================
 
 @app.route('/api/downloadpack/<identifier>')
 def downloadpack(identifier):
@@ -73,6 +73,12 @@ def downloadpack(identifier):
     os.remove(zipfile)
 
     return response
+
+#===============================================
+#
+#    FONT BACK GENERATION
+#    
+#===============================================
 
 def create_subfont(identifier,req_chars):
     import fontforge
@@ -210,7 +216,6 @@ def create_subfont(identifier,req_chars):
     shutil.rmtree(os.path.join(os.curdir, TMP_FILE_DIR, identifier))
 
     return identifier
-
 
 if __name__ == '__main__':
     app.debug = True
