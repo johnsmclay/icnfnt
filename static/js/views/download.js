@@ -26,17 +26,20 @@ define([
 
     // Send request to download font kit
     downloadKit: function(glyph) {
-      //alert(JSON.stringify(Glyphs.selected()));
-      $.ajax({
-        url: "/api/createpack",
-        type: 'POST',
-        data: { 
-            json_data: JSON.stringify(Glyphs.selected())
-        },
-        context: document.body
-      }).done(function(url) { 
-        window.location.href = url;
-      });
+      if (Glyphs.checkForSeleced()) {
+        $.ajax({
+          url: "/api/createpack",
+          type: 'POST',
+          data: { 
+              json_data: JSON.stringify(Glyphs.selected())
+          },
+          context: document.body
+        }).done(function(url) { 
+          window.location.href = url;
+        });
+      } else {
+        alert("Please select at least one icon to download a kit.");
+      }
     },
 
   });

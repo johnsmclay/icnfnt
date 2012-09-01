@@ -7,11 +7,17 @@ body {
 		color: #fff;
 		background-color: transparent;
 		padding: 30px 60px;
+		a {
+			color: #98F7FF;
+			font-weight: bold;
+			cursor: pointer;
+			margin-right: 20px;
+		}
 	}
 }
 .builder {
 	background-color: @white;
-	padding: 0 20px 20px 20px;
+	padding: 0 20px 50px 20px;
 	h2 {
 		margin-top: 10px;
 		margin-bottom: 5px;
@@ -101,6 +107,41 @@ body {
 	}
 }
 
-/***********************************************************
- * CONVENIENCE STYLES
- ***********************************************************/
+.megafooter {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: #555;
+	box-shadow: inset 0px 3px 10px fade(#000, 50%);
+	color: #fff;
+	background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png);
+	h3 { 
+		line-height: 2em; 
+		i { 
+			font-size: 1.5em;
+			color: #ccc;
+			line-height: 0.3;
+			margin-left: 10px;
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+	.grantpic, .claypic {
+		display: block;
+		background: center center no-repeat url(http://m4.licdn.com/mpr/mpr/shrink_80_80/p/1/000/00c/275/08db56b.jpg);
+		float: left;
+		border-radius: 31px;
+		box-shadow: 0px 2px 5px fade(#000, 50%);
+		width: 62px;
+		height: 62px;
+		margin-right: 10px;
+	}
+	a { color: #76D1FF; }
+	p { 
+		color: #ccc;
+		font-size: 1.1em;
+		line-height: 1.6em;
+		font-weight: 200;
+	}
+}

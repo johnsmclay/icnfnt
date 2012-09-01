@@ -46,6 +46,21 @@ define([
       this.each(function(glyph){
         glyph.set({"selected": false});
       });
+    },
+
+    checkForSelected: function() {
+      var count = 0;
+
+      this.each(function(glyph){
+        if (glyph.selected)
+          count++;
+      });
+
+      if (count > 0) {
+        return true;
+      } else {
+        return false;
+      }
     }
 
   });

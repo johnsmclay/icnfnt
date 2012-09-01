@@ -4446,9 +4446,15 @@ a.badge:hover {
   background-color: transparent;
   padding: 30px 60px;
 }
+.header .hero-unit a {
+  color: #98F7FF;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+}
 .builder {
   background-color: #ffffff;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 50px 20px;
 }
 .builder h2 {
   margin-top: 10px;
@@ -4552,9 +4558,48 @@ a.badge:hover {
 #selected-view #selected-glyph-list .preview .size-42px {
   font-size: 42px;
 }
-/***********************************************************
- * CONVENIENCE STYLES
- ***********************************************************/.pull-right {
+.megafooter {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #555;
+  box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/low_contrast_linen.png);
+}
+.megafooter h3 {
+  line-height: 2em;
+}
+.megafooter h3 i {
+  font-size: 1.5em;
+  color: #ccc;
+  line-height: 0.3;
+  margin-left: 10px;
+}
+.megafooter h3 i:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.megafooter .grantpic,
+.megafooter .claypic {
+  display: block;
+  background: center center no-repeat url(http://m4.licdn.com/mpr/mpr/shrink_80_80/p/1/000/00c/275/08db56b.jpg);
+  float: left;
+  border-radius: 31px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 62px;
+  height: 62px;
+  margin-right: 10px;
+}
+.megafooter a {
+  color: #76D1FF;
+}
+.megafooter p {
+  color: #ccc;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  font-weight: 200;
+}
+.pull-right {
   float: right;
 }
 .pull-left {

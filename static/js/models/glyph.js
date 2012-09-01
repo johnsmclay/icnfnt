@@ -18,7 +18,7 @@ define(['underscore', 'backbone'], function(_, Backbone) {
 
     // Toggle the `selected` state of the glyph.
     toggle: function() {
-      this.save({selected: !this.get("selected")});
+      this.save( { selected: !this.get("selected") } );
       return this.selected;
     },
 
