@@ -4567,7 +4567,7 @@ a.badge:hover {
   background: #555;
   box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
-  background: url(/static/img/low_contrast_linen.png);
+  background: url(/img/low_contrast_linen.png);
   text-shadow: -1px -1px 0px #000000;
 }
 .megafooter h3 {
@@ -4595,10 +4595,10 @@ a.badge:hover {
   margin-top: 10px;
 }
 .megafooter .grantpic {
-  background: center center no-repeat url(/static/img/grantpic.jpeg);
+  background: center center no-repeat url(/img/grantpic.jpeg);
 }
 .megafooter .claypic {
-  background: center center no-repeat url(/static/img/claypic.jpeg);
+  background: center center no-repeat url(/img/claypic.jpeg);
 }
 .megafooter a {
   color: #76D1FF;
