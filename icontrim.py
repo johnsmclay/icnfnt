@@ -83,9 +83,6 @@ def create_subfont(identifier,req_chars):
     f.fondname = name
     f.fullname = name
 
-    # Clear the FontForge selection first
-    f.selection.none()
-
     #set up the html test file
     html_data = open('test.html.template').read()
     html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'), 'w')
@@ -169,6 +166,8 @@ def create_subfont(identifier,req_chars):
 
     for filetype in filetypes:
             f.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-webfont.', filetype])))
+
+    f.close()
 
     #Open and write one more empty space to each file so the last character line will actually get written
     html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'), 'a')
