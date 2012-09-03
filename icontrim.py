@@ -83,6 +83,9 @@ def create_subfont(identifier,req_chars):
     f.fondname = name
     f.fullname = name
 
+    # Clear the FontForge selection first
+    f.selection.none()
+
     #set up the html test file
     html_data = open('test.html.template').read()
     html_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, 'test.html'), 'w')
@@ -147,9 +150,6 @@ def create_subfont(identifier,req_chars):
         # write the char to the ie7 compatibility css file
         cssie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-ie7.css'])), 'a')
         cssie7_out_file.write(''.join(['.icon-', str(character['name']), " { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf", str(character['uni']), ";&nbsp;'); }", "\n"]))
-
-        # Clear the FontForge selection first
-        f.selection.none()
 
         # select it in fontforge
         f.selection.select(("more", "unicode", None), ''.join(['uniF', str(character['uni'])]))
