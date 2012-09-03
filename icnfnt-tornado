@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+
+start() {
+	python /srv/icnfont/cyclone.py
+}
+
+stop() {
+	kill `ps aux | grep python | grep cyclone | awk '{print $2}'`
+}
+
+status() {
+	PID=`ps aux | grep python | grep cyclone | awk '{print $2}'`
+	if [ "$PID" = "" ]; then
+		echo "Tornado server not running."
+	else
+		echo "Tornado server is running. pid = $PID"
+	fi
+}
+
+RETVAL=0
+
+case "$1" in
+start)
+	start
+;;
+
+stop)
+	stop
+;;
+
+restart|reload)
+	stop
+	start
+;;
+status)
+	status
+;;
+*)
+	echo "*** Usage: ads {start|stop|restart|status}"
+	exit 1
+esac
+
+exit $RETVAL
