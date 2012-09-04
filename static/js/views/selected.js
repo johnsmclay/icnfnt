@@ -16,10 +16,15 @@ define([
 
     // At initialization we bind to the relevant events on the `Glyphs`
     // collection, when glyphs are added or changed.
-    initialize: function() {
+    initialize: function(options) {
+      this.vent = options.vent;
+
       this.render();
-      _.bindAll(this, 'render', 'addAll');
+      this.addAll();
+      //_.bindAll(this, 'render', 'addAll');
       Glyphs.bind('reset',        this.addAll);
+      Glyphs.bind('reset',        this.testeroo);
+      
     },
 
     // Re-rendering the App just means refreshing the statistics -- the rest
@@ -38,7 +43,7 @@ define([
     // Add all items in the **Glyphs** collection at once.
     addAll: function() {
       Glyphs.each(this.addOne);
-    }
+    },
 
   });
   return SelectedView;

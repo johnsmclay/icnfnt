@@ -42,6 +42,7 @@ define([
     // Toggle the `"selected"` state of the model.
     toggleSelected: function(evt) {
       this.model.toggle();
+      this.render();
     },
 
   });

@@ -10,7 +10,7 @@ define([
     model: Glyph,
 
     // Fetch all the glyphs from the server
-    url: 'js/fontawesome.json',
+    //url: 'js/fontawesome.json',
 
     // Filter down the list of all glyphs that are selected.
     selected: function() {

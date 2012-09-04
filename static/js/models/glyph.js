@@ -27,7 +27,12 @@ define(['underscore', 'backbone'], function(_, Backbone) {
         _gaq.push(['_trackEvent', 'Glyphs', this.get("name") + ' Selected selected']);
       }
 
-      this.save( { selected: !this.get("selected") } );
+      //avoiding using "save" to, in turn, avoid an error trying to hit a JSON url that won't work
+      this.attributes.selected = !this.get("selected");
+      
+      //manually firing the change event so that the selected list will update
+      this.change();
+
       return this.selected;
     },
 
