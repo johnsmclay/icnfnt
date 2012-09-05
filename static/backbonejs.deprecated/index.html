@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>icnfnt: FontAwesome for Bootstrap Icon Font Timeer / Subset builder by Grant Gordon & Clay Johns</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/less/bootstrap.css" />
+	<script data-main="js/main" src="js/libs/require/require.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="container hero-unit">
+		<h1>icnfnt</h1>
+		<p>
+			<span>Create a custom <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome</a> icon-font kit with just the icons you want.</span>
+			<a class="pull-right about" href="#about">About this project &darr;</a>
+		</p>
+	</div>
+</div>
+<div class="container builder">
+	<div id="glyphapp" class="row">
+		<h2>
+			<span>1. Choose your icons </span>
+			<small> Click to add to your set.</small>
+			<small style="margin-left:20px">
+				<a href="#" class="js-btn-all">Select All</a>
+				<span> | </span>
+				<a href="#" class="js-btn-none">Select None</a>
+			</small>
+		</h2>
+  		<ul id="glyph-list"></ul>
+	</div>
+	<h2>2. Preview your icon set <small> Click an icon to remove it.</small></h2>
+	<div id="selected-view" class="row">
+		<ul id="selected-glyph-list" class="unstyled">
+			
+		</ul>
+	</div>
+	<h2>3. Download your icon font kit <small>(includes CSS, LESS, SCSS, & SASS files)</small></h2>
+	<div id="download">
+		<button class="btn btn-large btn-success icon-download-alt icon-large btn-download"> Download Now</button>
+	</div>
+</div> <!--/container-->
+<a name="about"></a> 
+<div class="megafooter">
+	<div class="container">
+		<div class="row">
+			<div class="span4">
+				<h3>About icnfnt</h3>
+				<p>Many of Grant and Clay's clients wanted to use the fantastic <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome Icon Font</a>, but didn't want to make their users download more icons than necessary.</p>
+				<p>Icnfnt was originally a weekend project built to solve this problem. Since it worked so well, Grant and Clay decided to put it online for anyone to use.</p>
+				<p>Built with <a href="http://www.backbonejs.org">Backbone.js</a>, <a href="http://twitter.github.com/bootstrap">Bootstrap</a>, <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://fontforge.org/">FontForge</a>, and lots of pizza.</p>
+			</div>
+			<div class="span4">
+				<a class="grantpic" href="http://www.linkedin.com/in/grantjgordon"> </a>
+				<h3>
+					<span>About Grant </span>
+					<a href="http://www.linkedin.com/in/grantjgordon"><i class="icon-linkedin-sign"></i></a>
+					<a href="http://www.twitter.com/grantgordon"><i class="icon-twitter"></i></a>
+				</h3>
+
+				<p>Grant Gordon is a designveloper who currently designs UX, Product, and Identity at <a href="http://www.rationalux.com">RationalUX</a> while searching for his next startup.</p>
+				<p>Previously he served as the VP of Product and as a Software Engineer for EnticeLabs (acquired in 2010.)</p>
+				<p>He likes Python, Node.js, Less, Photoshop, Balsamiq, Cat Pictures, and Diet Coke.</p>
+				<p>Sometimes he <a href="http://www.grantjgordon.com">writes things</a>.</p>
+			</div>
+			<div class="span4">
+				<a class="claypic" href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"> </a>
+				<h3>
+					<span>About Clay</span>
+					<a href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"><i class="icon-linkedin-sign"></i></a>
+					<a href="https://twitter.com/johnsmclay"><i class="icon-twitter"></i></a>
+				</h3>
+				<p>Clay Johns specializes in infrastructure, big data, and scaling systems and consults for startups around the country.</p>
+				<p>Previously he ran Dev Ops at EnticeLabs.</p>
+				<p>He likes Hadoop, Python, OpenStack, Sublime Text 2, and Doctor Who.</p>
+			</div>
+		</div>
+		<div class="row copyright">Icnfnt copyright &copy; 2012 Grant Gordon.  All rights reserved.</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34499976-1']);
+  _gaq.push(['_setDomainName', 'icnfnt.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
