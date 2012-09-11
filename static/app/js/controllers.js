@@ -5,14 +5,9 @@
 
 function FontBuilderCtrl($scope, $anchorScroll, $http) {
 	$scope.glyphs = glyphs;
-
-  $scope.scrollToAbout = function(){
-    $.smoothScroll({
-      scrollTarget: '.megafooter'
-    });
-  }
 	
-	$scope.toggleSelected = function(glyph){
+	// Mark or unmark an icon as selected
+  $scope.toggleSelected = function(glyph){
     if (glyph.selected) {
       glyph.selected = false;
 			glyph.selectedclass = '';
@@ -26,6 +21,7 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
 
 	}
 
+  // Select all icons
 	$scope.selectAll = function() {
 		angular.forEach(glyphs, function(glyph){
 			glyph.selected = true;
@@ -33,6 +29,7 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
 		});
 	}
 
+  // Kill all selections
 	$scope.selectNone = function() {
 		angular.forEach(glyphs, function(glyph){
 			glyph.selected = false;
@@ -40,13 +37,18 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
 		});
 	}
 
+  // Make the call to download the font kit
 	$scope.downloadNow = function() {
 		var selectedGlyphs = [];
-		angular.forEach(glyphs, function(glyph){
+		
+    // Figure out which glyphs are selected
+    angular.forEach(glyphs, function(glyph){
 		 	if(glyph.selected){
 		 		selectedGlyphs.push(glyph);
 			}
 		});
+
+    // Make the request if there are any selected
     if (selectedGlyphs.length > 0) {
       $.ajax({
         url: "/api/createpack",
@@ -60,13 +62,23 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
         window.location.href = url;
       });
     } else {
+
+      // Prevent user from making request if no icons are selected
       alert("Please select at least one icon.");
       _gaq.push(['_trackEvent', 'Download', 'Rejected - No glyphs selected.']);
     }
 	}
+
+  // Angular breaks in-page anchors, so overriding with this jquery plugin
+  $scope.scrollToAbout = function(){
+    $.smoothScroll({
+      scrollTarget: '.megafooter'
+    });
+  }
 }
 
 
+// Stand-in for a proper model resource
 var glyphs =
 [
   {name:"glass",                uni:"000"},

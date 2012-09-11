@@ -2,6 +2,7 @@
 
 /* Directives */
 
+// A not-so-straightforward way of getting bootstrap tooltips to work with angular
 icnfnt.directive('tooltip', function () {
     return {
         restrict:'A',
