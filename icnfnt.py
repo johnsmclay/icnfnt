@@ -1,3 +1,13 @@
+"""
+    icnfnt
+    ~~~~~~~~~
+
+    A utility for creating subsets of the FontAwesome icon font (by Dave Gandy)
+
+    :copyright: (c) 2012 by Grant Gordon and Clay Johns.
+    :license: TBD
+"""
+
 from flask import Flask, request
 import os.path
 
