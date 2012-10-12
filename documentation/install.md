@@ -33,6 +33,22 @@ sudo chmod -R 764 $APP_DIR
 # Install git if you don't already have if (If you don't....feel my judgement)
 sudo apt-get install git
 # clone the repository
-sudo git clone git://github.com/johnsmclay/icnfnt.git $APP_DIR
+git clone git://github.com/johnsmclay/icnfnt.git $APP_DIR
 
 ```
+
+###Running the code (Basic)
+```bash
+cd $APP_DIR
+python icnfnt.py
+```
+you should see the following:
+```bash
+ * Running on http://0.0.0.0:5000/
+ * Restarting with reloader
+```
+This means the code is running. By default it is not in debug mode so it won't serve up static assets itself.  
+If you want to enable debug mode and test it right now, edit the icnfnt.py and change "app.debug" to "True".
+In debug mode you can go to http://ip_or_name_of_your_box:5000/index.html and everything should work.
+
+
