@@ -1,5 +1,3 @@
-This is still beign written. Don't judge me. It'll be done before I release it.
-
 ##Ubuntu (this was done on 12.04)
 ###Setting up the dependancies
 ```bash
