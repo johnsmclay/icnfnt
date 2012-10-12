@@ -1,4 +1,3 @@
-
 ##Ubuntu (this was done on 12.04)
 ###Setting up the dependancies
 ```bash
@@ -113,6 +112,6 @@ sudo chown -R $APP_USER:www-data $APP_DIR
 sudo service nginx reload
 ```
 
-Go to http://ip_or_name_of_your_box
+Go to http://ip_or_name_of_your_box  
 Do a little dance...make a little love...get down tonight.
 
