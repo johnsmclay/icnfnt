@@ -1,8 +1,11 @@
 #!/bin/sh
 #
 
+APP_DIR='/srv/icnfont'
+export ICNFNT_CONFIG=${APP_DIR}/icnfnt.cfg
+
 start() {
-	python /srv/icnfont/cyclone.py
+        python ${APP_DIR}/cyclone.py
 }
 
 stop() {
