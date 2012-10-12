@@ -41,8 +41,7 @@ you should see the following:
  * Running on http://0.0.0.0:5000/
  * Restarting with reloader
 ```
-This means the code is running. By default it is not in debug mode so it won't serve up static assets itself.  
-If you want to enable debug mode and test it right now, edit the icnfnt.py and change "app.debug" to "True".
+This means the code is running in debug mode.
 In debug mode you can go to http://ip_or_name_of_your_box:5000/index.html and everything should work.
 
 ###Running the code (Production)
