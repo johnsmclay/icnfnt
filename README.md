@@ -1,4 +1,8 @@
-##Ubuntu (this was done on 12.04)
+##icnfnt
+###About the project
+Icnfnt is a simple way to create subsets of the excellent FontAwesome icon font maintained by Dave Gandy.  We created this because we needed it for our clients, but we learned so much about about Font Forge, Flask, and Angular.js in the process that we decided to open source it so you could benefit, too.
+
+##Setup on Ubuntu 12.04
 ###Setting up the dependancies
 ```bash
 # Package manager for Python. You can use easy_install, but I am assumimg it's pip.
