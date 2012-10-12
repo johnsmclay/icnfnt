@@ -11,14 +11,6 @@ sudo apt-get install python-fontforge
 sudo pip install Flask
 # For zipping up the font packages
 sudo apt-get install zip
-
-# other stuffs we may need for daemonizing and other stuffs. No worries yet.
-#sudo apt-get install python-virtualenv
-#pip install wsgi
-#pip install wsgicontainer
-#pip install tornado
-#pip install python-daemon
-
 ```
 ###Setting up the code
 ```bash
@@ -51,4 +43,12 @@ This means the code is running. By default it is not in debug mode so it won't s
 If you want to enable debug mode and test it right now, edit the icnfnt.py and change "app.debug" to "True".
 In debug mode you can go to http://ip_or_name_of_your_box:5000/index.html and everything should work.
 
-
+###Running the code (Production - still in construction)
+```bash
+# other stuffs we may need for daemonizing and other stuffs. No worries yet.
+#sudo apt-get install python-virtualenv
+#pip install wsgi
+#pip install wsgicontainer
+#pip install tornado
+#pip install python-daemon
+```
