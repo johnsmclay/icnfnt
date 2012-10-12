@@ -1,0 +1,13 @@
+# FLask Debug mode
+DEBUG = False
+
+# Used to notify the admin of problems running the code
+NOTIFICATION_FROM_ADDRESS = 'daemon@whatever.com'
+NOTIFICATION_SMTP_SERVER = '127.0.0.1'
+NOTIFICATION_RECIPIENTS = ['test@funtimes.com', 'test2@funtimes.com']
+
+# Address the server will listen on. '0.0.0.0' means all addresses on this machine
+LISTEN_ADDRESS = '127.0.0.1'
+
+# TCP Port the service will listen on
+LISTEN_PORT = 5000

@@ -21,8 +21,8 @@ ADMINS = ['grantjgordon@gmail.com', 'gwpc114@gmail.com']
 
 ## Create flask app
 app = Flask(__name__)
-app.config.from_object(__name__)
-app.debug = False
+app.config.from_envvar('ICNFNT_CONFIG')
+#app.config.from_object(__name__)
 
 if app.config['DEBUG']:
     from werkzeug import SharedDataMiddleware
@@ -34,7 +34,7 @@ if app.config['DEBUG']:
 if not app.debug:
     import logging
     from logging.handlers import SMTPHandler
-    mail_handler = SMTPHandler('127.0.0.1', 'daemon@icnfnt.com', ADMINS, 'YourApplication Failed')
+    mail_handler = SMTPHandler(app.config['NOTIFICATION_SMTP_SERVER'], app.config['NOTIFICATION_FROM_ADDRESS'], ADMINS, 'YourApplication Failed')
     mail_handler.setLevel(logging.ERROR)
     app.logger.addHandler(mail_handler)
 
@@ -186,5 +186,4 @@ def create_subfont(identifier,req_chars):
 
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run(host='0.0.0.0')
+    app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
