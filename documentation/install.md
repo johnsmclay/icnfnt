@@ -45,12 +45,8 @@ This means the code is running. By default it is not in debug mode so it won't s
 If you want to enable debug mode and test it right now, edit the icnfnt.py and change "app.debug" to "True".
 In debug mode you can go to http://ip_or_name_of_your_box:5000/index.html and everything should work.
 
-###Running the code (Production
+###Running the code (Production)
 ```bash
-# other stuffs we may need for daemonizing and other stuffs. No worries yet.
-#sudo apt-get install python-virtualenv
-#pip install wsgi
-#pip install wsgicontainer
 # A better python web server than the built-in one (threading, etc.)
 sudo pip install tornado
 # Used to Daemonize the process
@@ -64,7 +60,11 @@ sudo chmod 770 /var/log/tornado
 sudo cp management/icnfnt-tornado /etc/init.d/
 # Allow it to execute
 sudo chmod +x /etc/init.d/icnfnt-tornado
-# NOTE: be sure and change the location of the code in the init.d script if it is different from the one listed
+# NOTE: be sure and change the APP_DIR in the init.d script to match yours
+# Swap the config file to the production one
+mv icnfnt.cfg icnfnt.cfg.basic_example
+cp icnfnt.cfg.production_example icnfnt.cfg
+sudo /etc/init.d/icnfnt-tornado start
 ```
 
 ###Using with a web server (Production)
@@ -109,8 +109,12 @@ server {
 
 # Enable the site we just created
 sudo ln -s /etc/nginx/sites-available/icnfnt /etc/nginx/sites-enabled/icnfnt
-# To apply the changes
-sudo service nginx reload
 # Allow Nginx to read the files (it runs as www-data)
 sudo chown -R $APP_USER:www-data $APP_DIR
+# To apply the changes
+sudo service nginx reload
 ```
+
+Go to http://ip_or_name_of_your_box
+Do a little dance...make a little love...get down tonight.
+
