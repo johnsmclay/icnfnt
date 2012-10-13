@@ -5,7 +5,7 @@ APP_DIR='/srv/icnfont'
 export ICNFNT_CONFIG=${APP_DIR}/icnfnt.cfg
 
 start() {
-        python ${APP_DIR}/cyclone.py
+        cd ${APP_DIR}/;python cyclone.py
 }
 
 stop() {
