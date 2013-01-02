@@ -100,6 +100,7 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
 
 
 // Stand-in for a proper model resource
+
 var glyphs =
 [
   {name:"glass",                uni:"000"},
@@ -134,6 +135,7 @@ var glyphs =
   {name:"play-circle",          uni:"01d"},
   {name:"repeat",               uni:"01e"},
 
+/* \f020 doesn't work in Safari. all shifted one down */
   {name:"refresh",              uni:"021"},
   {name:"list-alt",             uni:"022"},
   {name:"lock",                 uni:"023"},
@@ -325,6 +327,47 @@ var glyphs =
   {name:"sitemap",              uni:"0e8"},
   {name:"umbrella",             uni:"0e9"},
   {name:"paste",                uni:"0ea"},
+  {name:"lightbulb",            uni:"0eb"},
+  {name:"exchange",             uni:"0ec"},
+  {name:"cloud-download",       uni:"0ed"},
+  {name:"cloud-upload",         uni:"0ee"},
 
-  {name:"user-md",              uni:"200"}
+  {name:"user-md",              uni:"0f0"},
+  {name:"stethoscope",          uni:"0f1"},
+  {name:"suitcase",             uni:"0f2"},
+  {name:"bell-alt",             uni:"0f3"},
+  {name:"coffee",               uni:"0f4"},
+  {name:"food",                 uni:"0f5"},
+  {name:"file-alt",             uni:"0f6"},
+  {name:"building",             uni:"0f7"},
+  {name:"hospital",             uni:"0f8"},
+  {name:"ambulance",            uni:"0f9"},
+  {name:"medkit",               uni:"0fa"},
+  {name:"fighter-jet",          uni:"0fb"},
+  {name:"beer",                 uni:"0fc"},
+  {name:"h-sign",               uni:"0fd"},
+  {name:"plus-sign-alt",        uni:"0fe"},
+
+  {name:"double-angle-left",    uni:"100"},
+  {name:"double-angle-right",   uni:"101"},
+  {name:"double-angle-up",      uni:"102"},
+  {name:"double-angle-down",    uni:"103"},
+  {name:"angle-left",           uni:"104"},
+  {name:"angle-right",          uni:"105"},
+  {name:"angle-up",             uni:"106"},
+  {name:"angle-down",           uni:"107"},
+  {name:"desktop",              uni:"108"},
+  {name:"laptop",               uni:"109"},
+  {name:"tablet",               uni:"10a"},
+  {name:"mobile-phone",         uni:"10b"},
+  {name:"circle-blank",         uni:"10c"},
+  {name:"quote-left",           uni:"10d"},
+  {name:"quote-right",          uni:"10e"},
+
+  {name:"spinner",              uni:"110"},
+  {name:"circle",               uni:"111"},
+  {name:"reply",                uni:"112"},
+  {name:"github-alt",           uni:"113"},
+  {name:"folder-close-alt",     uni:"114"},
+  {name:"folder-open-alt",      uni:"115"}
 ];
