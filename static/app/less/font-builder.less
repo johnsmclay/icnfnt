@@ -70,6 +70,13 @@ h2 { font-size: 24px; }
 			padding: 5px 0px 5px 10px;
 			margin-bottom: 5px;
 			span { width: auto !important; }
+			.name {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 150px !important;
+				display: inline-block;
+			}
 			cursor: pointer;
 			.remove { 
 				float: right;
@@ -120,7 +127,7 @@ h2 { font-size: 24px; }
 	color: #fff;
 	background: url(../img/low_contrast_linen.png);
 	text-shadow: -1px -1px 0px black;
-	h3 { 
+	h4 { 
 		line-height: 2em; 
 		a { 
 			font-size: 1.5em;

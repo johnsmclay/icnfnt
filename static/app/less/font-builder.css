@@ -5712,6 +5712,13 @@ h2 {
 #selected-view #selected-glyph-list .preview span {
   width: auto !important;
 }
+#selected-view #selected-glyph-list .preview .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px !important;
+  display: inline-block;
+}
 #selected-view #selected-glyph-list .preview .remove {
   float: right;
   display: none;
@@ -5772,16 +5779,16 @@ h2 {
   background: url(../img/low_contrast_linen.png);
   text-shadow: -1px -1px 0px #000000;
 }
-.megafooter h3 {
+.megafooter h4 {
   line-height: 2em;
 }
-.megafooter h3 a {
+.megafooter h4 a {
   font-size: 1.5em;
   color: #ccc;
   line-height: 0.3;
   margin-left: 10px;
 }
-.megafooter h3 a:hover {
+.megafooter h4 a:hover {
   text-decoration: none;
   color: #fff;
 }

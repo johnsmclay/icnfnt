@@ -21,8 +21,7 @@ ADMINS = ['grantjgordon@gmail.com', 'gwpc114@gmail.com']
 
 ## Create flask app
 app = Flask(__name__)
-app.debug = True
-#app.config.from_envvar('ICNFNT_CONFIG')
+app.config.from_envvar('ICNFNT_CONFIG')
 #app.config.from_object(__name__)
 
 if app.config['DEBUG']:
@@ -151,7 +150,6 @@ def create_subfont(identifier,req_chars):
     filetypes = [	'ttf',
                     'eot',
                     'woff',
-                    'svg',
                 ]
 
     # Actually generate each of the font types
@@ -187,5 +185,4 @@ def create_subfont(identifier,req_chars):
 
 
 if __name__ == '__main__':
-    #app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
-    app.run(host='localhost',port=8080)
+    app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
