@@ -21,8 +21,9 @@ ADMINS = ['grantjgordon@gmail.com', 'gwpc114@gmail.com']
 
 ## Create flask app
 app = Flask(__name__)
-app.config.from_envvar('ICNFNT_CONFIG')
-#app.config.from_object(__name__)
+#app.config.from_envvar('ICNFNT_CONFIG')
+app.config.from_object(__name__)
+app.config['DEBUG'] = True
 
 if app.config['DEBUG']:
     from werkzeug import SharedDataMiddleware
@@ -80,12 +81,38 @@ def create_subfont(identifier,req_chars):
     # Location of templates
     template_path = 'templates/'
 
-    # Set up the font
+    # Beginning of glyph unicde range
+    GLYPHS_CODE_START = 0xf021
+    glyphcode = GLYPHS_CODE_START
+
+    # Fire up the reference font
     f = fontforge.open('fonts/fontawesome-webfont.ttf')
-    f.fontname = name
-    f.familyname = name
-    f.fondname = name
-    f.fullname = name
+    f.encoding = 'UnicodeFull'
+
+    # Set up the new font shell
+    nf = fontforge.font()
+    nf.encoding = 'UnicodeFull'
+    nf.fontname = name
+    nf.fullname = name
+    nf.familyname = name
+    nf.ascent = 850
+    nf.em = 1792
+    nf.descent = 256
+    nf.gasp =  ((65535, ('gridfit', 'antialias', 'symmetric-smoothing', 'gridfit+smoothing')),)
+    nf.gasp_version = 1
+    nf.hhea_descent = -34
+    nf.hhea_linegap = 0
+    nf.os2_codepages =  (1, 0)
+    nf.os2_fstype = 4
+    nf.os2_panose =  (0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+    nf.os2_strikeypos = 1075
+    nf.os2_strikeysize = 90
+    nf.os2_subyoff = 134
+    nf.os2_subysize = 1075
+    nf.os2_supyoff = 627
+    nf.os2_supysize = 1075
+    nf.os2_typolinegap = 0
+    nf.weight =  'Book'
 
     # Set up the html test file
     html_data = open(''.join([template_path, 'test.html.template'])).read()
@@ -122,40 +149,65 @@ def create_subfont(identifier,req_chars):
     cssie7_out_file = open(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-ie7.css'])), 'w')
     cssie7_out_file.write(cssie7_data)
 
-    # Add each character we want to the font object and related style and html files
+    # Add each glyph to the new font & related style + html files
     for character in req_chars:
-        html_out_file.write(''.join(['<tr><td><i class="icon-', str(character['name']), '"></i></td><td>.icon-', str(character['name']), '</td></tr>']))
 
-        less_out_file.write(''.join(['.icon-', str(character['name']), ':before', "\t\t", '{ content: "\\f', str(character['uni']), '"; }', "\n"]))
+        # If there is no SVG file set in the file attribute, snag the glyph from the reference font
+        if not character["file"]:
+            
+            # Find the glyph and copy it
+            f.selection.select(("more", "unicode", None), ''.join(['uniF', str(character['uni'])]))
+            f.copy()
+            
+            # Create a new glyph at the next generated unicode address, paste the outlines, re-name it
+            nf.selection.select(("unicode",), glyphcode)
+            nf.paste()
+            nf[glyphcode].glyphname = character["name"]
+            
+            # Clear the selections
+            f.selection.none()
+            nf.selection.none()
+        
+        # Otherwise get the outlines from the SVG and add-away
+        else:
+            # Build the SVG path
+            file_path = os.path.join('svg/', character['file'])
+            
+            # Make a new glyph at the next generated unicode address
+            g = nf.createChar(glyphcode, character['name'])
+            
+            # Slam the SVG outlines into the glyph
+            g.importOutlines(file_path)
 
-        lessie7_out_file.write(''.join(['.icon-', str(character['name']), "\t\t", "{ .ie7icon('&#xf", str(character['uni']), ";'); }", "\n"]))
+            # Tweak the glyph slightly
+            g.left_side_bearing = 15
+            g.right_side_bearing = 15
+        
+        # Make the newly created glyph available to generate the rest of the files
+        ng = nf[glyphcode]
 
-        sass_out_file.write(''.join(['.icon-', str(character['name']), ':before', "\n\t", 'content: "\\f', str(character['uni']), '"', "\n\n"]))
+        # Increment next glyph unicode address
+        glyphcode += 1
 
-        scss_out_file.write(''.join(['.icon-', str(character['name']), ':before', "\t\t", '{ content: "\\f', str(character['uni']), '"; }', "\n"]))
-
-        css_out_file.write(''.join(['.icon-', str(character['name']), ':before', "\t\t", '{ content: "\\f', str(character['uni']), '"; }', "\n"]))
-
-        cssie7_out_file.write(''.join(['.icon-', str(character['name']), " { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf", str(character['uni']), ";&nbsp;'); }", "\n"]))
-
-        f.selection.select(("more", "unicode", None), ''.join(['uniF', str(character['uni'])]))
-
-    # Invert the selection
-    f.selection.invert()
-
-    # Remove the selected objects
-    f.cut()
+        # Write out the supplementary files
+        html_out_file.write(''.join(['<tr><td><i class="icon-', str(ng.glyphname), '"></i></td><td>.icon-', str(ng.glyphname), '</td></tr>']))
+        less_out_file.write(''.join(['.icon-', str(ng.glyphname), ':before', "\t\t", '{ content: "', str(hex(ng.unicode)).replace("0xf","\\f"), '"; }', "\n"]))
+        lessie7_out_file.write(''.join(['.icon-', str(ng.glyphname), "\t\t", "{ .ie7icon('", str(hex(ng.unicode)).replace("0xf","&#xf"), ";'); }", "\n"]))
+        sass_out_file.write(''.join(['.icon-', str(ng.glyphname), ':before', "\n\t", 'content: "', str(hex(ng.unicode)).replace("0xf","\\f"), '"', "\n\n"]))
+        scss_out_file.write(''.join(['.icon-', str(ng.glyphname), ':before', "\t\t", '{ content: "', str(hex(ng.unicode)).replace("0xf","\\f"), '"; }', "\n"]))
+        css_out_file.write(''.join(['.icon-', str(ng.glyphname), ':before', "\t\t", '{ content: "', str(hex(ng.unicode)).replace("0xf","\\f"), '"; }', "\n"]))
+        cssie7_out_file.write(''.join(['.icon-', str(ng.glyphname), " { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '", str(hex(ng.unicode)).replace("0xe","&#xf"), ";&nbsp;'); }", "\n"]))
 
     # Kick out the various font files
-    filetypes = [	'ttf',
+    filetypes = [   'ttf',
                     'eot',
                     'woff',
                 ]
 
     # Actually generate each of the font types
     for filetype in filetypes:
-            f.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-webfont.', filetype])))
-
+            nf.generate(os.path.join(os.curdir, TMP_FILE_DIR, identifier, ''.join([name, '-webfont.', filetype])))
+    nf.close()
     f.close()
 
     # Add the closing line to the test.html file game
@@ -185,4 +237,5 @@ def create_subfont(identifier,req_chars):
 
 
 if __name__ == '__main__':
-    app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
+    #app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
+    app.run()

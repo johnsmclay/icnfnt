@@ -1,11 +1,43 @@
 @import "../bootstrap/less/bootstrap.less";
 
+.loading {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 10000;
+	background: fade(@black,60%);
+	.box {
+		background: fade(@black, 50%);
+		.border-radius(10px);
+		padding-top: 30px;
+		position: absolute;
+		font-weight: bold;
+		font-size: 24px;
+		width: 250px;
+		height: 50px;
+		text-align: center;
+		color: #eee;
+		text-shadow: 0 0 10px @black;
+		top: 50%;
+		left: 50%;
+		margin-left: -125px;
+		margin-top: -40px;
+		.spinner {
+			display: inline-block;
+			margin-right: 24px;
+			margin-bottom: 8px;
+		}
+	}
+}
+
 .header {
 	background-color: @blue;
 	.hero-unit {
 		color: #fff;
 		background-color: transparent;
-		padding: 30px 60px;
+		padding: 30px 0;
 		a {
 			&.about {
 				font-weight: bold;

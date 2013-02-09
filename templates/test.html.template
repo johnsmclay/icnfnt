@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>HTML5 boilerplate—all you really need…</title>
+	<title>icnfnt generated subset of FontAwesome 3.0.2</title>
 	<link rel="stylesheet" type="text/css" href="fontawesome.css" />
 	<style type="text/css">
 	body {
-		font-family: Helvetica Neue, Helvetica, Arial, Sans-Serif;
+		font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 	}
 	table {
 		border: 0;
