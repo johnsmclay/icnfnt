@@ -21,9 +21,8 @@ ADMINS = ['grantjgordon@gmail.com', 'gwpc114@gmail.com']
 
 ## Create flask app
 app = Flask(__name__)
-#app.config.from_envvar('ICNFNT_CONFIG')
+app.config.from_envvar('ICNFNT_CONFIG')
 app.config.from_object(__name__)
-app.config['DEBUG'] = True
 
 if app.config['DEBUG']:
     from werkzeug import SharedDataMiddleware
@@ -237,5 +236,4 @@ def create_subfont(identifier,req_chars):
 
 
 if __name__ == '__main__':
-    #app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
-    app.run()
+    app.run(host=app.config['LISTEN_ADDRESS'],port=app.config['LISTEN_PORT'])
