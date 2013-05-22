@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>icnfnt: Create a custom FontAwesome 3.0.2 icon-font kit with just the icons you want | by Grant Gordon & Clay Johns</title>
-  <link rel="stylesheet" type="text/css" href="app/less/font-builder.css" />
+  <link rel="stylesheet" type="text/css" href="app/css/font-builder.css" />
 </head>
 <body ng-view>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-<script src="app/lib/bootstrap-tooltip.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular-resource.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="app/lib/json2.js"></script>
 <script src="app/lib/spin.min.js"></script>
 <script src="app/lib/jquery.smooth-scroll.min.js"></script>
 <script src="app/js/app.js"></script>
+<script src="app/js/services.js"></script>
+<script src="app/js/filters.js"></script>
 <script src="app/js/controllers.js"></script>
 <script src="app/js/directives.js"></script>
 
@@ -28,10 +31,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
-  $(function(){
-    $('[rel=tooltip]').tooltip();
-  })
 
 </script>
 </body>

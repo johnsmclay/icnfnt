@@ -1,0 +1,2132 @@
+[
+  {
+    "id": "glass",
+    "unicode": "f000",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "music",
+    "unicode": "f001",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "search",
+    "unicode": "f002",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "envelope",
+    "unicode": "f003",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "heart",
+    "unicode": "f004",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "star",
+    "unicode": "f005",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "star-empty",
+    "unicode": "f006",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "user",
+    "unicode": "f007",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "film",
+    "unicode": "f008",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "th-large",
+    "unicode": "f009",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "th",
+    "unicode": "f00a",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "th-list",
+    "unicode": "f00b",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "ok",
+    "unicode": "f00c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "remove",
+    "unicode": "f00d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "zoom-in",
+    "unicode": "f00e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "zoom-out",
+    "unicode": "f010",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "off",
+    "unicode": "f011",
+    "aliases": [
+      "power-off"
+    ],
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "signal",
+    "unicode": "f012",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "cog",
+    "unicode": "f013",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "trash",
+    "unicode": "f014",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "home",
+    "unicode": "f015",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "file",
+    "unicode": "f016",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "time",
+    "unicode": "f017",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "road",
+    "unicode": "f018",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "download-alt",
+    "unicode": "f019",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "download",
+    "unicode": "f01a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "upload",
+    "unicode": "f01b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "inbox",
+    "unicode": "f01c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "play-circle",
+    "unicode": "f01d",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "repeat",
+    "unicode": "f01e",
+    "aliases": [
+      "rotate-right"
+    ],
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "refresh",
+    "unicode": "f021",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "list-alt",
+    "unicode": "f022",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "lock",
+    "unicode": "f023",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "flag",
+    "unicode": "f024",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "headphones",
+    "unicode": "f025",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "volume-off",
+    "unicode": "f026",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "volume-down",
+    "unicode": "f027",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "volume-up",
+    "unicode": "f028",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "qrcode",
+    "unicode": "f029",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "barcode",
+    "unicode": "f02a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "tag",
+    "unicode": "f02b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "tags",
+    "unicode": "f02c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "book",
+    "unicode": "f02d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bookmark",
+    "unicode": "f02e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "print",
+    "unicode": "f02f",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "camera",
+    "unicode": "f030",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "font",
+    "unicode": "f031",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "bold",
+    "unicode": "f032",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "italic",
+    "unicode": "f033",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "text-height",
+    "unicode": "f034",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "text-width",
+    "unicode": "f035",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "align-left",
+    "unicode": "f036",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "align-center",
+    "unicode": "f037",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "align-right",
+    "unicode": "f038",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "align-justify",
+    "unicode": "f039",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "list",
+    "unicode": "f03a",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "indent-left",
+    "unicode": "f03b",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "indent-right",
+    "unicode": "f03c",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "facetime-video",
+    "unicode": "f03d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "picture",
+    "unicode": "f03e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "pencil",
+    "unicode": "f040",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "map-marker",
+    "unicode": "f041",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "adjust",
+    "unicode": "f042",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "tint",
+    "unicode": "f043",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "edit",
+    "unicode": "f044",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "share",
+    "unicode": "f045",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "check",
+    "unicode": "f046",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "move",
+    "unicode": "f047",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "step-backward",
+    "unicode": "f048",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "fast-backward",
+    "unicode": "f049",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "backward",
+    "unicode": "f04a",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "play",
+    "unicode": "f04b",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "pause",
+    "unicode": "f04c",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "stop",
+    "unicode": "f04d",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "forward",
+    "unicode": "f04e",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "fast-forward",
+    "unicode": "f050",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "step-forward",
+    "unicode": "f051",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "eject",
+    "unicode": "f052",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "chevron-left",
+    "unicode": "f053",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "chevron-right",
+    "unicode": "f054",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "plus-sign",
+    "unicode": "f055",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "minus-sign",
+    "unicode": "f056",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "remove-sign",
+    "unicode": "f057",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "ok-sign",
+    "unicode": "f058",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "question-sign",
+    "unicode": "f059",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "info-sign",
+    "unicode": "f05a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "screenshot",
+    "unicode": "f05b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "remove-circle",
+    "unicode": "f05c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "ok-circle",
+    "unicode": "f05d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "ban-circle",
+    "unicode": "f05e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "arrow-left",
+    "unicode": "f060",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "arrow-right",
+    "unicode": "f061",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "arrow-up",
+    "unicode": "f062",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "arrow-down",
+    "unicode": "f063",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "share-alt",
+    "unicode": "f064",
+    "aliases": [
+      "mail-forward"
+    ],
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "resize-full",
+    "unicode": "f065",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "resize-small",
+    "unicode": "f066",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "plus",
+    "unicode": "f067",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "minus",
+    "unicode": "f068",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "asterisk",
+    "unicode": "f069",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "exclamation-sign",
+    "unicode": "f06a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "gift",
+    "unicode": "f06b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "leaf",
+    "unicode": "f06c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "fire",
+    "unicode": "f06d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "eye-open",
+    "unicode": "f06e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "eye-close",
+    "unicode": "f070",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "warning-sign",
+    "unicode": "f071",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "plane",
+    "unicode": "f072",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "calendar",
+    "unicode": "f073",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "random",
+    "unicode": "f074",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "comment",
+    "unicode": "f075",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "magnet",
+    "unicode": "f076",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "chevron-up",
+    "unicode": "f077",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "chevron-down",
+    "unicode": "f078",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "retweet",
+    "unicode": "f079",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "shopping-cart",
+    "unicode": "f07a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "folder-close",
+    "unicode": "f07b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "folder-open",
+    "unicode": "f07c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "resize-vertical",
+    "unicode": "f07d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "resize-horizontal",
+    "unicode": "f07e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bar-chart",
+    "unicode": "f080",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "twitter-sign",
+    "unicode": "f081",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "facebook-sign",
+    "unicode": "f082",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "camera-retro",
+    "unicode": "f083",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "key",
+    "unicode": "f084",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "cogs",
+    "unicode": "f085",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "comments",
+    "unicode": "f086",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "thumbs-up",
+    "unicode": "f087",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "thumbs-down",
+    "unicode": "f088",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "star-half",
+    "unicode": "f089",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "heart-empty",
+    "unicode": "f08a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "signout",
+    "unicode": "f08b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "linkedin-sign",
+    "unicode": "f08c",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "pushpin",
+    "unicode": "f08d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "external-link",
+    "unicode": "f08e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "signin",
+    "unicode": "f090",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "trophy",
+    "unicode": "f091",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "github-sign",
+    "unicode": "f092",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "upload-alt",
+    "unicode": "f093",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "lemon",
+    "unicode": "f094",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "phone",
+    "unicode": "f095",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "check-empty",
+    "unicode": "f096",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bookmark-empty",
+    "unicode": "f097",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "phone-sign",
+    "unicode": "f098",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "twitter",
+    "unicode": "f099",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "facebook",
+    "unicode": "f09a",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "github",
+    "unicode": "f09b",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "unlock",
+    "unicode": "f09c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "credit-card",
+    "unicode": "f09d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "rss",
+    "unicode": "f09e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "hdd",
+    "unicode": "f0a0",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bullhorn",
+    "unicode": "f0a1",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bell",
+    "unicode": "f0a2",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "certificate",
+    "unicode": "f0a3",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "hand-right",
+    "unicode": "f0a4",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "hand-left",
+    "unicode": "f0a5",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "hand-up",
+    "unicode": "f0a6",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "hand-down",
+    "unicode": "f0a7",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "circle-arrow-left",
+    "unicode": "f0a8",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "circle-arrow-right",
+    "unicode": "f0a9",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "circle-arrow-up",
+    "unicode": "f0aa",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "circle-arrow-down",
+    "unicode": "f0ab",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "globe",
+    "unicode": "f0ac",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "wrench",
+    "unicode": "f0ad",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "tasks",
+    "unicode": "f0ae",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "filter",
+    "unicode": "f0b0",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "briefcase",
+    "unicode": "f0b1",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "fullscreen",
+    "unicode": "f0b2",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "group",
+    "unicode": "f0c0",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "link",
+    "unicode": "f0c1",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "cloud",
+    "unicode": "f0c2",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "beaker",
+    "unicode": "f0c3",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "cut",
+    "unicode": "f0c4",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "copy",
+    "unicode": "f0c5",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "paper-clip",
+    "unicode": "f0c6",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "save",
+    "unicode": "f0c7",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "sign-blank",
+    "unicode": "f0c8",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "reorder",
+    "unicode": "f0c9",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "list-ul",
+    "unicode": "f0ca",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "list-ol",
+    "unicode": "f0cb",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "strikethrough",
+    "unicode": "f0cc",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "underline",
+    "unicode": "f0cd",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "table",
+    "unicode": "f0ce",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "magic",
+    "unicode": "f0d0",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "truck",
+    "unicode": "f0d1",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "pinterest",
+    "unicode": "f0d2",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "pinterest-sign",
+    "unicode": "f0d3",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "google-plus-sign",
+    "unicode": "f0d4",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "google-plus",
+    "unicode": "f0d5",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "money",
+    "unicode": "f0d6",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "caret-down",
+    "unicode": "f0d7",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "caret-up",
+    "unicode": "f0d8",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "caret-left",
+    "unicode": "f0d9",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "caret-right",
+    "unicode": "f0da",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "columns",
+    "unicode": "f0db",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "sort",
+    "unicode": "f0dc",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "sort-down",
+    "unicode": "f0dd",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "sort-up",
+    "unicode": "f0de",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "envelope-alt",
+    "unicode": "f0e0",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "linkedin",
+    "unicode": "f0e1",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "undo",
+    "unicode": "f0e2",
+    "aliases": [
+      "rotate-left"
+    ],
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "legal",
+    "unicode": "f0e3",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "dashboard",
+    "unicode": "f0e4",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "comment-alt",
+    "unicode": "f0e5",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "comments-alt",
+    "unicode": "f0e6",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bolt",
+    "unicode": "f0e7",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "sitemap",
+    "unicode": "f0e8",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "umbrella",
+    "unicode": "f0e9",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "paste",
+    "unicode": "f0ea",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "lightbulb",
+    "unicode": "f0eb",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "exchange",
+    "unicode": "f0ec",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "cloud-download",
+    "unicode": "f0ed",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "cloud-upload",
+    "unicode": "f0ee",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "user-md",
+    "unicode": "f0f0",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "stethoscope",
+    "unicode": "f0f1",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "suitcase",
+    "unicode": "f0f2",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bell-alt",
+    "unicode": "f0f3",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "coffee",
+    "unicode": "f0f4",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "food",
+    "unicode": "f0f5",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "file-alt",
+    "unicode": "f0f6",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "building",
+    "unicode": "f0f7",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "hospital",
+    "unicode": "f0f8",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "ambulance",
+    "unicode": "f0f9",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "medkit",
+    "unicode": "f0fa",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "fighter-jet",
+    "unicode": "f0fb",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "beer",
+    "unicode": "f0fc",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "h-sign",
+    "unicode": "f0fd",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "plus-sign-alt",
+    "unicode": "f0fe",
+    "categories": [
+      "Medical Icons"
+    ]
+  },
+  {
+    "id": "double-angle-left",
+    "unicode": "f100",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "double-angle-right",
+    "unicode": "f101",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "double-angle-up",
+    "unicode": "f102",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "double-angle-down",
+    "unicode": "f103",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "angle-left",
+    "unicode": "f104",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "angle-right",
+    "unicode": "f105",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "angle-up",
+    "unicode": "f106",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "angle-down",
+    "unicode": "f107",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "desktop",
+    "unicode": "f108",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "laptop",
+    "unicode": "f109",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "tablet",
+    "unicode": "f10a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "mobile-phone",
+    "unicode": "f10b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "circle-blank",
+    "unicode": "f10c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "quote-left",
+    "unicode": "f10d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "quote-right",
+    "unicode": "f10e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "spinner",
+    "unicode": "f110",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "circle",
+    "unicode": "f111",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "reply",
+    "unicode": "f112",
+    "aliases": [
+      "mail-reply"
+    ],
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "folder-close-alt",
+    "unicode": "f114",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "folder-open-alt",
+    "unicode": "f115",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "expand-alt",
+    "unicode": "f116",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "collapse-alt",
+    "unicode": "f117",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "smile",
+    "unicode": "f118",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "frown",
+    "unicode": "f119",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "meh",
+    "unicode": "f11a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "gamepad",
+    "unicode": "f11b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "keyboard",
+    "unicode": "f11c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "flag-alt",
+    "unicode": "f11d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "flag-checkered",
+    "unicode": "f11e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "terminal",
+    "unicode": "f120",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "code",
+    "unicode": "f121",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "reply-all",
+    "unicode": "f122",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "mail-reply-all",
+    "unicode": "f122",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "star-half-empty",
+    "unicode": "f123",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "location-arrow",
+    "unicode": "f124",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "crop",
+    "unicode": "f125",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "code-fork",
+    "unicode": "f126",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "unlink",
+    "unicode": "f127",
+    "categories": [
+      "Text Editor Icons"
+    ]
+  },
+  {
+    "id": "question",
+    "unicode": "f128",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "info",
+    "unicode": "f129",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "exclamation",
+    "unicode": "f12a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "superscript",
+    "unicode": "f12b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "subscript",
+    "unicode": "f12c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "eraser",
+    "unicode": "f12d",
+    "categories": [
+      "Text Editor Icons",
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "puzzle-piece",
+    "unicode": "f12e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "microphone",
+    "unicode": "f130",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "microphone-off",
+    "unicode": "f131",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "shield",
+    "unicode": "f132",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "calendar-empty",
+    "unicode": "f133",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "fire-extinguisher",
+    "unicode": "f134",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "rocket",
+    "unicode": "f135",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "maxcdn",
+    "unicode": "f136",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "chevron-sign-left",
+    "unicode": "f137",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "chevron-sign-right",
+    "unicode": "f138",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "chevron-sign-up",
+    "unicode": "f139",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "chevron-sign-down",
+    "unicode": "f13a",
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "id": "html5",
+    "unicode": "f13b",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "css3",
+    "unicode": "f13c",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
+    "id": "anchor",
+    "unicode": "f13d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "unlock-alt",
+    "unicode": "f13e",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "bullseye",
+    "unicode": "f140",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "ellipsis-horizontal",
+    "unicode": "f141",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "ellipsis-vertical",
+    "unicode": "f142",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "rss-sign",
+    "unicode": "f143",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "play-sign",
+    "unicode": "f144",
+    "categories": [
+      "Video Player Icons"
+    ]
+  },
+  {
+    "id": "ticket",
+    "unicode": "f145",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "minus-sign-alt",
+    "unicode": "f146",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "check-minus",
+    "unicode": "f147",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "level-up",
+    "unicode": "f148",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "level-down",
+    "unicode": "f149",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "check-sign",
+    "unicode": "f14a",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "edit-sign",
+    "unicode": "f14b",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "external-link-sign",
+    "unicode": "f14c",
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
+    "id": "share-sign",
+    "unicode": "f14d",
+    "categories": [
+      "Web Application Icons"
+    ]
+  }
+]

@@ -1,86 +1,163 @@
 <div ng-show="loading" class="loading">
   <div class="box" icn-spinner>Generating...</div>
 </div>
-<a href="https://github.com/johnsmclay/icnfnt"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
 <div class="header">
-  <div class="container hero-unit">
-    <h1>icnfnt</h1>
-    <p>
-      <span>Create a custom <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome 3.0.2</a> icon-font kit with just the icons you want.</span>
-      <a class="pull-right about" ng-click="scrollToAbout()">About this project &darr;</a>
-    </p>
-  </div>
-</div>
-<div class="container builder">
-	<div id="glyphapp" class="row">
-		<h2>
-			<span>1. Choose your icons </span>
-			<small> Click to add to your set.</small>
-			<small style="margin-left:20px">
-				<a class="js-btn-all" ng-click="selectAll()">Select All</a>
-				<span> | </span>
-				<a class="js-btn-none" ng-click="selectNone()">Select None</a>
-			</small>
-		</h2>
-			<ul id="glyph-list" >
-				<li ng-repeat="glyph in glyphs" ng-class="glyph.selectedclass" ng-click="toggleSelected(glyph)" rel="tooltip" tooltip="glyph.name">
-					<i class="icon-{{glyph.name}}"></i>
-				</li>
-			</ul>
-	</div>
-	<h2>2. Preview your icon set <small> Click an icon to remove it.</small></h2>
-	<div id="selected-view" class="row">
-		<ul id="selected-glyph-list" class="unstyled">
-			<li ng-repeat="glyph in glyphs" class="preview" ng-class="glyph.selectedclass" ng-click="toggleSelected(glyph)">
-				<span class="remove icon-remove-sign"></span>
-				<span class="name"><i class="icon-{{glyph.name}} icon-large"></i> icon-{{glyph.name}}</span>
-			</li>
-		</ul>
-	</div>
-	<h2>3. Download your icon font kit <small>(includes CSS, LESS, SCSS, & SASS files)</small></h2>
-	<div id="download" ng-click="downloadNow()">
-		<button class="btn btn-large btn-success icon-download-alt icon-large btn-download"> Download Now</button>
-	</div>
+  <h1 class="pull-left">icnfnt</h1>
+  <span class="pull-left tagline">Create custom <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome 3.1.0</a> icon-font kits</span>
+  <a class="pull-right about" ng-click="about=true">About this project</a>
 </div>
 
-<div class="megafooter">
-  <div class="container">
-    <div class="row">
-      <div class="span4">
-        <h4>About icnfnt</h4>
+<div class="control-bar">
+  <h2>1. Choose your icons </h2>
+  <div class="all-none">
+    <a class="js-btn-all" ng-click="selectAll()">Select All</a>
+    <span> | </span>
+    <a class="js-btn-none" ng-click="selectNone()">None</a>
+  </div>
+  <input type="text" class="pull-right input-medium" ng-model="query" placeholder="Filter Icons...">
+  <i class="pull-right clear-query icon-remove-sign icon-large" ng-show="query" ng-click="query=null"></i>
+  <div class="btn-group pull-right">
+    <button class="btn" ng-class="{active:compact}" ng-click="compact = true">Compact View</button>
+    <button class="btn" ng-class="{active:!compact}" ng-click="compact = false">Full View</button>
+  </div>
+</div>
+
+<div class="builder">
+  <div ng-hide="(categories['Web Application Icons'] | filter:query).length == 0">
+    <h2>Web Application Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Web Application Icons'] | filter:query"
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="icon-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Text Editor Icons'] | filter:query).length == 0">
+    <h2>Text Editor Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Text Editor Icons'] | filter:query" 
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="icon-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Directional Icons'] | filter:query).length == 0">
+    <h2>Directional Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Directional Icons'] | filter:query"
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="icon-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Video Player Icons'] | filter:query).length == 0">
+    <h2>Video Player Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Video Player Icons'] | filter:query"
+        ng-class="{selected:glyph.selected, square:compact}" 
+        ng-click="toggleGlyphSelected(glyph)">
+        <i class="icon-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Brand Icons'] | filter:query).length == 0">
+    <h2>Brand Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Brand Icons'] | filter:query"
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="icon-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Medical Icons'] | filter:query).length == 0">
+    <h2>Medical Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Medical Icons'] | filter:query"
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="icon-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+  <div class="row copyright">Icnfnt copyright &copy; 2012 Grant Gordon.  All rights reserved.</div>
+</div>
+
+<div class="tray">
+  <h2>2. Download your kit</h2>
+  <div class="explanation">Includes Fonts (otf, ttf, eot, woff) and styles (css, less, sass, scss.)</div>
+  <div id="download" ng-click="downloadNow()">
+    <button class="btn btn-large btn-success icon-download-alt icon-large btn-download btn-block"> Download Now</button>
+  </div>
+  <div class="selected-set">
+      <div class="placeholder" ng-hide="selected.length > 0">
+        <i class="icon-flag"></i>
+        Click icons on the left to build your kit.
+      </div>
+      <div  class="glyph"
+            ng-click="toggleGlyphSelected(glyph)"
+            ng-repeat="glyph in selected | reverse"
+            ng-class="{square:compact}"
+            ng-animate="'repeat'">
+        <i class="icon-{{glyph.id}}"></i><span> .icon-{{glyph.id}}</span>
+        <i class="icon-remove-sign remove-indicator"></i>
+      </div>
+  </div>
+</div>
+
+<div class="about-project" ng-click="about=false" ng-show="about">
+  <div class="info-panel">
+      <div style="padding: 20px;">
+        <a class="pull-right close-link">Close</a>
+        <h3>About icnfnt</h3>
         <p>The official subsetting tool of FontAwesome!</p>
         <p>Many of Grant and Clay's clients wanted to use the fantastic <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome Icon Font</a>, but didn't want to make their users download more icons than necessary.</p>
         <p>Icnfnt was originally a weekend project built to solve this problem. Since it worked so well, Grant and Clay decided to put it online for anyone to use.</p>
         <p>Built with <a href="http://www.angularjs.org">Angular.js</a>, <a href="http://twitter.github.com/bootstrap">Bootstrap</a>, <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://fontforge.org/">FontForge</a>, and lots of pizza.</p>
         <p><a href="https://github.com/johnsmclay/icnfnt">Fork icnfnt on github.</a></p>
       </div>
-      <div class="span4">
-        <a class="grantpic" href="http://www.linkedin.com/in/grantjgordon"> </a>
-        <h4>
-          <span>About Grant </span>
-          <a href="https://github.com/grantgordon"><i class="icon-github-alt"></i></a>
-          <a href="http://www.linkedin.com/in/grantjgordon"><i class="icon-linkedin-sign"></i></a>
-          <a href="http://www.twitter.com/grantgordon"><i class="icon-twitter"></i></a>
-        </h4>
+      <div class="clearfix bottom-half">
+        <div class="span4">
+          <a class="grantpic" href="http://www.linkedin.com/in/grantjgordon"> </a>
+          <h4>
+            <span>About Grant </span>
+            <a href="https://github.com/grantgordon"><i class="icon-github-alt"></i></a>
+            <a href="http://www.linkedin.com/in/grantjgordon"><i class="icon-linkedin-sign"></i></a>
+            <a href="http://www.twitter.com/grantgordon"><i class="icon-twitter"></i></a>
+          </h4>
 
-        <p>Grant Gordon is a designveloper who currently designs UX, Product, and Identity at <a href="http://www.rationalux.com">RationalUX</a> while searching for his next startup.</p>
-        <p>Previously he served as the VP of Product and as a Software Engineer for EnticeLabs (acquired in 2010.)</p>
-        <p>He likes Python, Node.js, Less, Photoshop, Balsamiq, Cat Pictures, and Diet Coke.</p>
-        <p>Sometimes he <a href="http://www.grantjgordon.com">writes things</a>.</p>
-      </div>
-      <div class="span4">
-        <a class="claypic" href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"> </a>
-        <h4>
-          <span>About Clay</span>
-          <a href="https://github.com/johnsmclay"><i class="icon-github-alt"></i></a>
-          <a href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"><i class="icon-linkedin-sign"></i></a>
-          <a href="https://twitter.com/johnsmclay"><i class="icon-twitter"></i></a>
-        </h4>
-        <p>Clay Johns specializes in infrastructure, big data, and scaling systems and consults for startups around the country.</p>
-        <p>Previously he ran Dev Ops at EnticeLabs.</p>
-        <p>He likes Hadoop, Python, OpenStack, Sublime Text 2, and Doctor Who.</p>
-      </div>
+          <p>Grant Gordon is a designveloper who currently designs UX, Product, and Identity at <a href="http://www.rationalux.com">RationalUX</a> while searching for his next startup.</p>
+          <p>Previously he served as the VP of Product and as a Software Engineer for EnticeLabs (acquired in 2010.)</p>
+          <p>He likes Python, Node.js, Less, Photoshop, Balsamiq, Cat Pictures, and Diet Coke.</p>
+          <p>Sometimes he <a href="http://www.grantjgordon.com">writes things</a>.</p>
+        </div>
+        <div class="span4">
+          <a class="claypic" href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"> </a>
+          <h4>
+            <span>About Clay</span>
+            <a href="https://github.com/johnsmclay"><i class="icon-github-alt"></i></a>
+            <a href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"><i class="icon-linkedin-sign"></i></a>
+            <a href="https://twitter.com/johnsmclay"><i class="icon-twitter"></i></a>
+          </h4>
+          <p>Clay Johns specializes in infrastructure, big data, and scaling systems and consults for startups around the country.</p>
+          <p>Previously he ran Dev Ops at EnticeLabs.</p>
+          <p>He likes Hadoop, Python, OpenStack, Sublime Text 2, and Doctor Who.</p>
+        </div>
     </div>
-    <div class="row copyright">Icnfnt copyright &copy; 2012 Grant Gordon.  All rights reserved.</div>
   </div>
 </div>

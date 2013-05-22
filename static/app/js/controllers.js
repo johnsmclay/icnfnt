@@ -24,66 +24,77 @@
 /* Controllers */
 
 
-function FontBuilderCtrl($scope, $anchorScroll, $http) {
-	$scope.glyphs = glyphs;
+function FontBuilderCtrl($scope, Glyph, $anchorScroll, $http) {
+	//$scope.glyphs = glyphs;
   $scope.loading = false;
-	
-	// Mark or unmark an icon as selected
-  $scope.toggleSelected = function(glyph){
-    if (glyph.selected) {
-      glyph.selected = false;
-			glyph.selectedclass = '';
-      _gaq.push(['_trackEvent', 'Glyphs', glyph.name + ' De-selected']);
-		
-    } else if (!glyph.selected) {
-      glyph.selected = true;
-			glyph.selectedclass = 'selected';
-      _gaq.push(['_trackEvent', 'Glyphs', glyph.name + ' Selected']);
-		}
+  $scope.categories = { "Web Application Icons" : [],
+                      "Text Editor Icons" : [],
+                      "Video Player Icons" : [],
+                      "Directional Icons" : [],
+                      "Brand Icons" : [],
+                      "Medical Icons" : [] }
+  $scope.compact = false;
+  $scope.about = false;
+  $scope.filtering = false;
+  $scope.selected = [];
 
-	}
+  $scope.glyphs = Glyph.query(function(results){
+    
+    angular.forEach(results, function(glyph, index){
+      glyph.selected = false;
+      $scope.categories[glyph["categories"][0]].push(glyph);
+    })
+
+    //$scope.categories = $scope.categories.unique();
+
+    console.log($scope.categories)
+  });
+
+  $scope.toggleGlyphSelected = function(glyph) {
+    glyph.selected = !glyph.selected;
+    if (glyph.selected) {
+      $scope.selected.push(glyph);
+    } else {
+      $scope.selected.splice($scope.selected.indexOf(glyph),1);
+    }
+  }
 
   // Select all icons
-	$scope.selectAll = function() {
-		angular.forEach(glyphs, function(glyph){
-			glyph.selected = true;
-			glyph.selectedclass = 'selected';
-		});
+	$scope.selectAll = function(category) {
+    if (!category) {
+      $scope.selected = [];
+      angular.forEach($scope.glyphs, function(glyph){
+        glyph.selected = true;
+        $scope.selected.push(glyph);
+  		});
+    }
 	}
 
   // Kill all selections
 	$scope.selectNone = function() {
-		angular.forEach(glyphs, function(glyph){
-			glyph.selected = false;
-			glyph.selectedclass = '';
-		});
-	}
+    angular.forEach($scope.selected, function(glyph){
+      glyph.selected = false;
+    });
+    $scope.selected = [];
+  }
 
   $scope.toggleLoading = function() {
     console.log("changing loading from: " + $scope.loading + " -> " + !$scope.loading)
-    $scope.loading = !$scope.loading
+    $scope.loading = !$scope.loading;
   }
 
   // Make the call to download the font kit
 	$scope.downloadNow = function() {
-		var selectedGlyphs = [];
-		
-    // Figure out which glyphs are selected
-    angular.forEach(glyphs, function(glyph){
-		 	if(glyph.selected){
-		 		selectedGlyphs.push(glyph);
-			}
-		});
 
     // Make the request if there are any selected
-    if (selectedGlyphs.length > 0) {
+    if ($scope.selected.length > 0) {
       
       $scope.toggleLoading();
-      var payload = $.param({ json_data: JSON.stringify(selectedGlyphs) });
+      var payload = $.param({ json_data: JSON.stringify($scope.selected) });
       
       $http({
         url:"/api/createpack", 
-        data: payload, 
+        data: payload,
         method: "POST",
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).
@@ -94,22 +105,9 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
         }).
         error(function(data, status) {
           $scope.toggleLoading();
-          alert("failed");
+          alert("There was a problem creating your icon pack.  Please try again.");
       });
 
-      /*
-      $.ajax({
-        url: "/api/createpack",
-        type: 'POST',
-        data: { 
-            json_data: JSON.stringify(selectedGlyphs)
-        },
-        context: document.body
-      }).done(function(url) {
-        $scope.toggleLoading()
-        _gaq.push(['_trackEvent', 'Download', 'Success']);
-        window.location.href = url;
-      });*/
     } else {
 
       // Prevent user from making request if no icons are selected
@@ -127,8 +125,23 @@ function FontBuilderCtrl($scope, $anchorScroll, $http) {
 }
 
 
-// Stand-in for a proper model resource
+// Testing out some Array augmentation
+Array.prototype.unique = function() {
+    var o = {}, i, l = this.length, r = [];
+    for(i=0; i<l;i+=1) {
+      o[this[i]] = this[i];
+    }
+    for(i in o) {
+      if (o[i] != ""){
+        r.push(o[i]);
+      }
+    }
+    return r;
+};
 
+
+// Stand-in for a proper model resource
+/*
 var glyphs =
 [
   {name:"glass",                uni:"000",  file:""},
@@ -163,7 +176,7 @@ var glyphs =
   {name:"play-circle",          uni:"01d",  file:""},
   {name:"repeat",               uni:"01e",  file:""},
 
-/* \f020 doesn't work in Safari. all shifted one down */
+// \f020 doesn't work in Safari. all shifted one down 
   {name:"refresh",              uni:"021",  file:""},
   {name:"list-alt",             uni:"022",  file:""},
   {name:"lock",                 uni:"023",  file:""},
@@ -398,4 +411,4 @@ var glyphs =
   {name:"github-alt",           uni:"113",  file:""},
   {name:"folder-close-alt",     uni:"114",  file:""},
   {name:"folder-open-alt",      uni:"115",  file:""}
-];
+];*/

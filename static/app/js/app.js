@@ -22,7 +22,7 @@
 'use strict';
 
 // Create angular app
-var icnfnt = angular.module('icnfnt', []);
+var icnfnt = angular.module('icnfnt', ['icnfnt.filters', 'icnfnt.services', 'icnfnt.directives']);
 
 icnfnt.config(['$routeProvider', function($routeProvider, $anchorScroll) {
 	// Set up the route

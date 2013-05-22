@@ -23,8 +23,9 @@
 
 /* Directives */
 
-// A not-so-straightforward way of getting bootstrap tooltips to work with angular
-icnfnt.directive('tooltip', function () {
+angular.module('icnfnt.directives', [])
+
+.directive('tooltip', function () {
     return {
         restrict:'A',
         link: function postLink(scope, element, attrs)
@@ -36,6 +37,18 @@ icnfnt.directive('tooltip', function () {
             el.tooltip({title: "ohai"});
         }
     }
+})
+
+.directive('icnSpinner', function() {
+    return {
+        restrict: 'A',
+        replace: true,
+        link: function(scope, element, attrs) {
+            var spinner = new Spinner(smallSpinnerOpts).spin();
+            //element[0].appendChild(spinner);
+            $(element[0]).prepend(spinner.el);
+        }
+    };
 });
 
 var smallSpinnerOpts = {
@@ -55,14 +68,3 @@ var smallSpinnerOpts = {
   top: '0', // Top position relative to parent in px
   left: '0' // Left position relative to parent in px
 };
-icnfnt.directive('icnSpinner', function() {
-    return {
-        restrict: 'A',
-        replace: true,
-        link: function(scope, element, attrs) {
-            var spinner = new Spinner(smallSpinnerOpts).spin();
-            //element[0].appendChild(spinner);
-            $(element[0]).prepend(spinner.el);
-        }
-    };
-});

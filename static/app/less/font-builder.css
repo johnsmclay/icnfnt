@@ -3995,6 +3995,9 @@ input[type="submit"].btn.btn-mini {
   background-color: transparent;
   padding: 30px 0;
 }
+.header .hero-unit h1 {
+  font-size: 21px;
+}
 .header .hero-unit a {
   color: #98F7FF;
   cursor: pointer;

@@ -1,0 +1,1 @@
+"use strict";angular.module("icnfnt.filters",[]).filter("interpolate",["version",function(e){return function(t){return String(t).replace(/\%VERSION\%/mg,e)}}]).filter("reverse",function(){return function(e){return e.slice().reverse()}});
