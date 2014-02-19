@@ -28,9 +28,11 @@ function FontBuilderCtrl($scope, Glyph, $anchorScroll, $http) {
 	//$scope.glyphs = glyphs;
   $scope.loading = false;
   $scope.categories = { "Web Application Icons" : [],
+                      "Form Control Icons" : [],
+                      "Currency Icons" : [],
                       "Text Editor Icons" : [],
-                      "Video Player Icons" : [],
                       "Directional Icons" : [],
+                      "Video Player Icons" : [],
                       "Brand Icons" : [],
                       "Medical Icons" : [] }
   $scope.compact = false;

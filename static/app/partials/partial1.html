@@ -4,7 +4,7 @@
 
 <div class="header">
   <h1 class="pull-left">icnfnt</h1>
-  <span class="pull-left tagline">Create custom <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome 3.1.0</a> icon-font kits</span>
+  <span class="pull-left tagline">Create custom <a href="http://fortawesome.github.com/Font-Awesome/">FontAwesome 4.0.3</a> icon-font kits</span>
   <a class="pull-right about" ng-click="about=true">About this project</a>
 </div>
 
@@ -16,7 +16,7 @@
     <a class="js-btn-none" ng-click="selectNone()">None</a>
   </div>
   <input type="text" class="pull-right input-medium" ng-model="query" placeholder="Filter Icons...">
-  <i class="pull-right clear-query icon-remove-sign icon-large" ng-show="query" ng-click="query=null"></i>
+  <i class="pull-right clear-query fa fa-remove-sign fa-lg" ng-show="query" ng-click="query=null"></i>
   <div class="btn-group pull-right">
     <button class="btn" ng-class="{active:compact}" ng-click="compact = true">Compact View</button>
     <button class="btn" ng-class="{active:!compact}" ng-click="compact = false">Full View</button>
@@ -30,7 +30,31 @@
       <li ng-repeat="glyph in categories['Web Application Icons'] | filter:query"
           ng-class="{selected:glyph.selected, square:compact}" 
           ng-click="toggleGlyphSelected(glyph)">
-        <i class="icon-{{glyph.id}}"></i>
+        <i class="fa fa-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Form Control Icons'] | filter:query).length == 0">
+    <h2>Form Control Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Form Control Icons'] | filter:query"
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="fa fa-{{glyph.id}}"></i>
+        <span>{{glyph.id}}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div ng-hide="(categories['Currency Icons'] | filter:query).length == 0">
+    <h2>Currency Icons</h2>
+    <ul class="glyph-section">
+      <li ng-repeat="glyph in categories['Currency Icons'] | filter:query" 
+          ng-class="{selected:glyph.selected, square:compact}" 
+          ng-click="toggleGlyphSelected(glyph)">
+        <i class="fa fa-{{glyph.id}}"></i>
         <span>{{glyph.id}}</span>
       </li>
     </ul>
@@ -42,7 +66,7 @@
       <li ng-repeat="glyph in categories['Text Editor Icons'] | filter:query" 
           ng-class="{selected:glyph.selected, square:compact}" 
           ng-click="toggleGlyphSelected(glyph)">
-        <i class="icon-{{glyph.id}}"></i>
+        <i class="fa fa-{{glyph.id}}"></i>
         <span>{{glyph.id}}</span>
       </li>
     </ul>
@@ -54,7 +78,7 @@
       <li ng-repeat="glyph in categories['Directional Icons'] | filter:query"
           ng-class="{selected:glyph.selected, square:compact}" 
           ng-click="toggleGlyphSelected(glyph)">
-        <i class="icon-{{glyph.id}}"></i>
+        <i class="fa fa-{{glyph.id}}"></i>
         <span>{{glyph.id}}</span>
       </li>
     </ul>
@@ -66,7 +90,7 @@
       <li ng-repeat="glyph in categories['Video Player Icons'] | filter:query"
         ng-class="{selected:glyph.selected, square:compact}" 
         ng-click="toggleGlyphSelected(glyph)">
-        <i class="icon-{{glyph.id}}"></i>
+        <i class="fa fa-{{glyph.id}}"></i>
         <span>{{glyph.id}}</span>
       </li>
     </ul>
@@ -78,7 +102,7 @@
       <li ng-repeat="glyph in categories['Brand Icons'] | filter:query"
           ng-class="{selected:glyph.selected, square:compact}" 
           ng-click="toggleGlyphSelected(glyph)">
-        <i class="icon-{{glyph.id}}"></i>
+        <i class="fa fa-{{glyph.id}}"></i>
         <span>{{glyph.id}}</span>
       </li>
     </ul>
@@ -90,7 +114,7 @@
       <li ng-repeat="glyph in categories['Medical Icons'] | filter:query"
           ng-class="{selected:glyph.selected, square:compact}" 
           ng-click="toggleGlyphSelected(glyph)">
-        <i class="icon-{{glyph.id}}"></i>
+        <i class="fa fa-{{glyph.id}}"></i>
         <span>{{glyph.id}}</span>
       </li>
     </ul>
@@ -102,11 +126,11 @@
   <h2>2. Download your kit</h2>
   <div class="explanation">Includes Fonts (otf, ttf, eot, woff) and styles (css, less, sass, scss.)</div>
   <div id="download" ng-click="downloadNow()">
-    <button class="btn btn-large btn-success icon-download-alt icon-large btn-download btn-block"> Download Now</button>
+    <button class="btn btn-large btn-success btn-download btn-block"><i class="fa fa-download fa-lg"></i> &nbsp;Download Now</button>
   </div>
   <div class="selected-set">
       <div class="placeholder" ng-hide="selected.length > 0">
-        <i class="icon-flag"></i>
+        <i class="fa fa-flag"></i>
         Click icons on the left to build your kit.
       </div>
       <div  class="glyph"
@@ -114,8 +138,8 @@
             ng-repeat="glyph in selected | reverse"
             ng-class="{square:compact}"
             ng-animate="'repeat'">
-        <i class="icon-{{glyph.id}}"></i><span> .icon-{{glyph.id}}</span>
-        <i class="icon-remove-sign remove-indicator"></i>
+        <i class="fa fa-{{glyph.id}}"></i><span> .fa-{{glyph.id}}</span>
+        <i class="fa fa-remove-sign remove-indicator"></i>
       </div>
   </div>
 </div>
@@ -136,9 +160,9 @@
           <a class="grantpic" href="http://www.linkedin.com/in/grantjgordon"> </a>
           <h4>
             <span>About Grant </span>
-            <a href="https://github.com/grantgordon"><i class="icon-github-alt"></i></a>
-            <a href="http://www.linkedin.com/in/grantjgordon"><i class="icon-linkedin-sign"></i></a>
-            <a href="http://www.twitter.com/grantgordon"><i class="icon-twitter"></i></a>
+            <a href="https://github.com/grantgordon"><i class="fa fa-github-alt"></i></a>
+            <a href="http://www.linkedin.com/in/grantjgordon"><i class="fa fa-linkedin-sign"></i></a>
+            <a href="http://www.twitter.com/grantgordon"><i class="fa fa-twitter"></i></a>
           </h4>
 
           <p>Grant Gordon is a designveloper who currently designs UX, Product, and Identity at <a href="http://www.rationalux.com">RationalUX</a> while searching for his next startup.</p>
@@ -150,9 +174,9 @@
           <a class="claypic" href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"> </a>
           <h4>
             <span>About Clay</span>
-            <a href="https://github.com/johnsmclay"><i class="icon-github-alt"></i></a>
-            <a href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"><i class="icon-linkedin-sign"></i></a>
-            <a href="https://twitter.com/johnsmclay"><i class="icon-twitter"></i></a>
+            <a href="https://github.com/johnsmclay"><i class="fa fa-github-alt"></i></a>
+            <a href="http://www.linkedin.com/pub/m-clay-johns/7/473/bb9"><i class="fa fa-linkedin-sign"></i></a>
+            <a href="https://twitter.com/johnsmclay"><i class="fa fa-twitter"></i></a>
           </h4>
           <p>Clay Johns specializes in infrastructure, big data, and scaling systems and consults for startups around the country.</p>
           <p>Previously he ran Dev Ops at EnticeLabs.</p>
