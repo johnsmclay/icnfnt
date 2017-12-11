@@ -1,11 +1,9 @@
-##icnfnt
-###About the project
+# icnfnt
+## About the project
 Icnfnt is a simple way to create subsets of the excellent FontAwesome icon font maintained by Dave Gandy.  We created this because we needed it for our clients, but we learned so much about about Font Forge, Flask, and Angular.js in the process that we decided to open source it so you could benefit, too.
 
-Try it out at http://www.icnfnt.com
-
-##Setup on Ubuntu 12.04
-###Setting up the dependancies
+## Setup on Ubuntu 12.04
+### Setting up the dependancies
 ```bash
 # Package manager for Python. You can use easy_install, but I am assumimg it's pip.
 sudo apt-get install python-pip
@@ -16,7 +14,8 @@ sudo pip install Flask
 # For zipping up the font packages
 sudo apt-get install zip
 ```
-###Setting up the code
+
+### Setting up the code
 ```bash
 # We need a directory for the code.  I'm going to put it in /srv/icnfnt.
 APP_DIR='/srv/icnfont'
@@ -33,7 +32,7 @@ git clone git://github.com/johnsmclay/icnfnt.git $APP_DIR
 
 ```
 
-###Running the code (Basic)
+### Running the code (Basic)
 ```bash
 cd $APP_DIR
 cp icnfnt.cfg.basic_example icnfnt.cfg
@@ -48,7 +47,7 @@ you should see the following:
 This means the code is running in debug mode.
 In debug mode you can go to http://ip_or_name_of_your_box:5000/index.html and everything should work.
 
-###Running the code (Production)
+### Running the code (Production)
 ```bash
 # A better python web server than the built-in one (threading, etc.)
 sudo pip install tornado
@@ -70,7 +69,7 @@ cp icnfnt.cfg.production_example icnfnt.cfg
 sudo /etc/init.d/icnfnt-tornado start
 ```
 
-###Using with a web server (Production)
+### Using with a web server (Production)
 You usually don't want your static files served by python so I set up Nginx to serve up the static files and pass the rest back to python.
 ```bash
 sudo apt-get install nginx
@@ -120,4 +119,3 @@ sudo service nginx reload
 
 Go to http://ip_or_name_of_your_box  
 Do a little dance...make a little love...get down tonight.
-
